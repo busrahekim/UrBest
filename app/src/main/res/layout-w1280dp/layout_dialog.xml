@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorBackgroundFloating"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName|text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/last"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:hint="@string/last_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName|text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/last"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:hint="@string/mail"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@android:color/darker_gray" />
+</RelativeLayout>

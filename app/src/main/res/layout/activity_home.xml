@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".HomeActivity"
+    tools:openDrawer="start">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/nav_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/b3"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            tools:targetApi="lollipop" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nav_toolbar"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Welcome ,"
+            android:textColor="#000000"
+            android:textSize="32sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView6"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:paddingStart="30dp"
+            android:text="@string/to_best_of_you"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView7"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="casual"
+            android:text="@string/how_do_you_feel_today"
+            android:textColor="#000000" />
+
+        <RadioGroup
+            android:id="@+id/radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tw"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/calmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/calm"
+                android:buttonTint="#000000"
+                android:text="@string/radiobutton" />
+
+            <RadioButton
+                android:id="@+id/happyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/happy"
+                android:buttonTint="#454141"
+                android:clickable="true"
+                android:text="@string/radiobutton" />
+
+            <RadioButton
+                android:id="@+id/sadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/sad"
+                android:buttonTint="#454141"
+                android:text="@string/radiobutton" />
+
+            <RadioButton
+                android:id="@+id/stressButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/stressed"
+                android:buttonTint="#292727"
+                android:clickable="true"
+                android:text="@string/radiobutton" />
+
+            <RadioButton
+                android:id="@+id/tiredButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/tired"
+                android:buttonTint="#000000"
+                android:clickable="true"
+                android:text="@string/radiobutton" />
+        </RadioGroup>
+
+<!--
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:text="@string/favorites"
+            android:textColor="#000000"
+            android:textSize="30sp" />-->
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/homeViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/button"
+            android:layout_below="@id/radio"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:shadowColor="#FF0000"
+            android:text="@string/question"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="@color/colorAccent"
+            app:backgroundTintMode="src_over" />
+    </RelativeLayout>
+       <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>
